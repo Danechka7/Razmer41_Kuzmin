@@ -1,0 +1,39 @@
+﻿<Page x:Class="Razmer41_Kuzmin.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Razmer41_Kuzmin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" 
+      Title="AuthPage" FontFamily="Comic Sans MS">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Логин"  Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Top" FontSize="30" ></TextBlock>
+        <TextBlock Text="Пароль" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="30" ></TextBlock>
+        <TextBox Name="LoginTB" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="45" Width="250" FontSize="30" ></TextBox>
+        <TextBox Name="PassTB" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center" Height="45" Width="250" FontSize="30" ></TextBox>
+        <Button Content="Войти как гость" Name="BtnGost" Grid.Column="0" Grid.Row="2" Width="175" Height="30" HorizontalAlignment="Center" Click="BtnGost_Click" ></Button>
+        <Button Content="Войти c ролью" Name="BtnRol" Grid.Column="1" Grid.Row="2" Width="175" Height="30" HorizontalAlignment="Center"  Click="BtnRol_Click" ></Button>
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" Visibility="Collapsed" Name="CaptchaPanel">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <TextBlock Name="captchaOneWord" FontSize="22" Margin="30,0,0,0"></TextBlock>
+                <TextBlock Name="captchaTwoWord" FontSize="22" TextDecorations="Strikethrough" Margin="0,5,0,0"></TextBlock>
+                <TextBlock Name="captchaThreeWord" FontSize="22" TextDecorations="Strikethrough"></TextBlock>
+                <TextBlock Name="captchaFourWord" FontSize="22" TextDecorations="Strikethrough" Margin="0,10,0,0"></TextBlock>
+                <TextBox Name="CaptchaInput" FontSize="16" Width="150" Height="30" Margin="0,10,0,0 " HorizontalAlignment="Center" TextAlignment="Center"></TextBox>
+            </StackPanel>
+            
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -23,7 +23,7 @@ namespace Razmer41_Kuzmin
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new AuthPage());
             KuzminClass.MainFrame = MainFrame;
         }
 
