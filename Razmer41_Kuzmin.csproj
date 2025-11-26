@@ -147,6 +147,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>KuzminModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="KuzminModel.edmx.diagram">
       <DependentUpon>KuzminModel.edmx</DependentUpon>
     </None>
@@ -157,19 +158,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="KuzminModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KuzminModel.Context.cs</LastGenOutput>
-      <DependentUpon>KuzminModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="KuzminModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>KuzminModel.edmx</DependentUpon>
-      <LastGenOutput>KuzminModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="tovar\B320R5.jpg" />
     <Resource Include="tovar\D329H3.jpg" />
     <Resource Include="tovar\D572U8.jpg" />
@@ -180,7 +168,7 @@
     <Resource Include="tovar\H782T5.jpg" />
     <Resource Include="tovar\J384T6.jpg" />
     <Resource Include="tovar\А112Т4.jpg" />
-    <Resource Include="res\picture.png" />
+    <Resource Include="tovar\picture.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\icon.ico" />
@@ -191,6 +179,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="KuzminModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KuzminModel.edmx</DependentUpon>
+      <LastGenOutput>KuzminModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KuzminModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KuzminModel.edmx</DependentUpon>
+      <LastGenOutput>KuzminModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Razmer41_Kuzmin"
         mc:Ignorable="d"
-        Title="Kuzmin" Height="450" Width="800" FontFamily="Comic Sans MS" Icon= "/res/logo.png" WindowState="Maximized">
+        Title="Kuzmin" Height="650" Width="1200" FontFamily="Comic Sans MS" Icon= "/res/logo.png" >
     <Grid>
-        <Grid.RowDefinitions   >
+        <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Image Source="/res/logo.png" HorizontalAlignment="Left"></Image>
+        <Image Source="/Res/logo.png" HorizontalAlignment="Left"></Image>
         <TextBlock Text="41 Размер" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
-        <Button Content="Назад" Name="BtnBack" Width="175" Height="30" HorizontalAlignment="Right" Margin="5"
-                Click="BtnBack_Click"></Button>
+        <Button Content="Назад" Name="BtnBack" Width="175" Height="30" HorizontalAlignment="Right" Margin="5" 
+            Click="BtnBack_Click"></Button>
     </Grid>
 </Window>

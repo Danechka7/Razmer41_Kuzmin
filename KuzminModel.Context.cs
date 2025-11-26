@@ -18,17 +18,16 @@ namespace Razmer41_Kuzmin
         private static Kuzmin41Entities _context;
         public static Kuzmin41Entities GetContext()
         {
-            if(_context == null)
+            if (_context == null)
                 _context = new Kuzmin41Entities();
             return _context;
+
         }
-
-
         public Kuzmin41Entities()
             : base("name=Kuzmin41Entities")
         {
         }
-        
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Razmer41_Kuzmin
 {
-    internal class Manager
+    class KuzminClass
     {
         public static Frame MainFrame { get; set; }
     }

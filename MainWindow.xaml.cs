@@ -24,12 +24,12 @@ namespace Razmer41_Kuzmin
         {
             InitializeComponent();
             MainFrame.Navigate(new ProductPage());
-            Manager.MainFrame = MainFrame;
+            KuzminClass.MainFrame = MainFrame;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.GoBack();
+            KuzminClass.MainFrame.GoBack();
         }
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)
