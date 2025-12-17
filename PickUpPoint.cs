@@ -25,7 +25,11 @@ namespace Razmer41_Kuzmin
         public string PickupPointCIty { get; set; }
         public string PickupPointStreet { get; set; }
         public string PickupPointFlat { get; set; }
-    
+        public string PickUpFull
+        {
+            get { return PickupPointIndex + " " + PickupPointCIty + " " + PickupPointStreet + " " + PickupPointFlat; }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
     }

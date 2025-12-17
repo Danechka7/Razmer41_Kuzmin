@@ -30,6 +30,7 @@ namespace Razmer41_Kuzmin
         public string ProductCategory { get; set; }
         public int ProductDiscountAmount { get; set; }
         public int ProductQuantityInStock { get; set; }
+        public int ProductRealStock { get; set; }
         public string ProducDescription { get; set; }
         public string ProductPhoto { get; set; }
         public string ProductStatus { get; set; }
