@@ -21,12 +21,16 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Дата формирования заказа" FontSize="22"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="1" Text="Дата доставки заказа" FontSize="22"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="2" Text="ФИО клиента" FontSize="22"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="3" Text="Номер заказа" FontSize="22"></TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="5" Text="Пункт выдачи" FontSize="22"></TextBlock>
+        
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Сумма заказа" FontSize="22"></TextBlock>
+        <TextBlock Name="TotalCost" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"></TextBlock>
         <DatePicker Name="OrderFormDate" Grid.Row="0" Grid.Column="1" IsEnabled="False" SelectedDateChanged="OrderFormDate_SelectedDateChanged"></DatePicker>
         <DatePicker Name="OrderDeliveryDate" Grid.Row="1" Grid.Column="1" IsEnabled="False"></DatePicker>
         <TextBlock Name="FIOBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" FontSize="20"/>

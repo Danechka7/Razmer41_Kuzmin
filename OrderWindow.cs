@@ -70,7 +70,9 @@
                 OrderFormDate.Text = DateTime.Now.ToString();
 
                 SetDeliveryDate();
-            }
+            CalculateTotalCost();
+
+        }
 
             private void BtnPlus_Click(object sender, RoutedEventArgs e)
             {
@@ -85,7 +87,8 @@
                 selectedOrderProducts[index].ProductQuantity++;
 
                 SetDeliveryDate();
-                OrderListView.Items.Refresh();
+            CalculateTotalCost();
+            OrderListView.Items.Refresh();
             }
 
             private void BtnMinus_Click(object sender, RoutedEventArgs e)
@@ -103,8 +106,9 @@
                     selectedOrderProducts[index].ProductQuantity--;
 
                     SetDeliveryDate();
+                CalculateTotalCost();
 
-                    if (prod.ProductRealStock == 0)
+                if (prod.ProductRealStock == 0)
                         DeleteBtn_Click(sender, e);
 
                     OrderListView.Items.Refresh();
@@ -232,7 +236,8 @@
                 else if (prod.ProductRealStock == 0)
                     prod.ProductQuantityInStock = 1;
                 SetDeliveryDate();
-                OrderListView.Items.Refresh();
+            CalculateTotalCost();
+            OrderListView.Items.Refresh();
             }
             private void SetDeliveryDate()
             {
@@ -249,6 +254,33 @@
                     OrderDeliveryDate.SelectedDate = Convert.ToDateTime(OrderFormDate.Text).AddDays(6);
                 currentOrder.OrderDeliveryDate = Convert.ToDateTime(OrderDeliveryDate.Text);
             }
-        
+        private void CalculateTotalCost()
+        {
+            decimal total = 0;
+            decimal discount = 0;
+
+            foreach (Product p in selectedProducts)
+            {
+                decimal price = p.ProductCost;
+                int quantity = p.ProductRealStock;
+                decimal productDiscount = p.ProductDiscountAmount;
+
+                decimal productTotal = price * quantity;
+                decimal productDiscountAmount = productTotal * (productDiscount / 100);
+
+                total += productTotal - productDiscountAmount;
+                discount += productDiscountAmount;
+            }
+
+            TotalCost.Text = $"{total:0.00} рублей (скидка: {discount:0.00} руб.)";
+            }
+
+
+
+
+
         }
+
     }
+
+
